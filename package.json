@@ -16,10 +16,11 @@
   "main": "index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/simoncpu/https-post.git"
+    "url": "git+https://github.com/simoncpu/https-post.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "The MIT License"
+  "license": "MIT",
+  "homepage": "https://github.com/simoncpu/https-post#readme"
 }
