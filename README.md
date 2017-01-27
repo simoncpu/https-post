@@ -80,12 +80,12 @@ Returns an instance of [http.ClientRequest](http://nodejs.org/api/http.html#http
 
 Setting up
 
-	var http = require('http');
-	http.post = require('http-post');
+	var https = require('https');
+	https.post = require('https-post');
 
 Posting data
 
-	http.post('http://localhost/postscript.php', { name: 'Sam', email: 'sam@emberlabs.org' }, function(res){
+	https.post('https://localhost/postscript.php', { name: 'Bruce Wayne', email: 'batman@example.org' }, function(res){
 		res.setEncoding('utf8');
 		res.on('data', function(chunk) {
 			console.log(chunk);
@@ -101,7 +101,7 @@ Posting a file
 		}
 	];
 	
-	http.post('http://localhost/postscript.php', [], files, function(res){
+	https.post('https://localhost/postscript.php', [], files, function(res){
 		//...
 	});
 
@@ -118,7 +118,7 @@ Posting multiple files
 		}
 	];
 	
-	http.post('http://localhost/postscript.php', [], files, function(res){
+	https.post('https://localhost/postscript.php', [], files, function(res){
 		// ...
 	});
 
@@ -140,7 +140,7 @@ Posting data and files
 		}
 	];
 	
-	http.post('http://localhost/postscript.php', data, files, function(res){
+	https.post('https://localhost/postscript.php', data, files, function(res){
 		// ...
 	});
 
