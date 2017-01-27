@@ -1,6 +1,7 @@
 /**
- * http-post
+ * https-post
  *
+ * Copyright (c) 2017 Simon Cornelius P. Umacob <simoncpu@gmail.com>
  * (c) copyright 2012 Sam Thompson <sam@emberlabs.org>
  * License: The MIT License - http://opensource.org/licenses/mit-license.php
  */
@@ -77,7 +78,7 @@ module.exports = function(options, data, files, fn) {
 		'Content-Length': length
 	};
 
-	var req = require('http').request(options, function(responce) {
+	var req = require('https').request(options, function(responce) {
 		fn(responce);
 	});
 

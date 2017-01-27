@@ -1,27 +1,28 @@
-# http-post
+# https-post
 
-This utility extends the functionality of the `http` library in stock node.js
-providing a post request function in the same fashion of node's [http.get()](http://nodejs.org/api/http.html#http_http_get_options_callback).
+This utility is a fork of the original [http-post](https://github.com/samt/http-post) to support HTTPS.
+This extends the functionality of the `https` library in stock node.js
+providing a post request function in the same fashion of node's [https.get()](https://nodejs.org/api/https.html#https_https_get_options_callback).
 
-In the same style as `http.get()`, this function calls `req.end()` automatically
+In the same style as `https.get()`, this function calls `req.end()` automatically
 
 ## Installing
 
-	npm install http-post
+	npm install https-post
 
 ## Usage and parameters
 
-	http-post(options, data[, files[, callback]])
+	https-post(options, data[, files[, callback]])
 
 or
 
-	http-post(options, data[, callback])
+	https-post(options, data[, callback])
 
 ### options
 
-Options are the same as the ones for [http.request()](http://nodejs.org/api/http.html#http_http_request_options_callback)
+Options are the same as the ones for [https.request()](https://nodejs.org/api/https.html#https_https_get_options_callback)
 except `method` will always be forced to `POST`. Note that `options` can be
-replaced with the full URI of the request similar to `http.get` allowing for
+replaced with the full URI of the request similar to `https.get` allowing for
 even greater flexibility in your post requests.
 
 ### data
@@ -67,8 +68,8 @@ the request.
 
 ### callback
 
-Callback is the same from [http.request()](http://nodejs.org/api/http.html#http_http_request_options_callback).
-It accepts an instance of [http.ClientResponce](http://nodejs.org/api/http.html#http_http_clientresponse)
+Callback is the same from [https.request()](https://nodejs.org/api/https.html#https_https_get_options_callback).
+It accepts an instance of [https.ClientResponce](http://nodejs.org/api/http.html#http_http_clientresponse)
 that has been created during the time of the request.
 
 ## Return
